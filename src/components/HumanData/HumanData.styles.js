@@ -1,12 +1,18 @@
 import styled from 'styled-components'
 
 export const HumanDataWrapper = styled.section`
-  width: 30%;
-  height: 60%;
+  width: 60%;
+  height: 80%;
 
-  background-color: #ccc;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  place-self: center;
+
+  background-color: #111a2411;
+  backdrop-filter: blur(10px);
   border: none;
   border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
   display: flex;
   flex-direction: column;
@@ -16,9 +22,14 @@ export const HumanDataWrapper = styled.section`
   font-family: ${({ theme }) => theme.fonts.nunito};
 
   h1 {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
     letter-spacing: 2px;
+    color: white;
+
+    @media screen and (min-width: 1600px) {
+      font-size: 40px;
+    }
   }
 
   form {

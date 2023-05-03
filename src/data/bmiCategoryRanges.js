@@ -1,0 +1,58 @@
+export default [
+  {
+    minBmi: null,
+    maxBmi: 16,
+    state: 'Starvation',
+    healthRisk: 'Minimal, increased other health issues',
+    color: 0,
+  },
+  {
+    minBmi: 16,
+    maxBmi: 16.99,
+    state: 'Emaciation',
+    healthRisk: 'Minimal, increased other health issues',
+    color: 1,
+  },
+  {
+    minBmi: 17,
+    maxBmi: 18.49,
+    state: 'Underweight',
+    healthRisk: 'Minimal, increased other health issues',
+    color: 2,
+  },
+  {
+    minBmi: 18.5,
+    maxBmi: 24.99,
+    state: 'Decent weight',
+    healthRisk: 'Minimal',
+    color: 3,
+  },
+  {
+    minBmi: 25,
+    maxBmi: 29.99,
+    state: 'Overweight',
+    healthRisk: 'Medium',
+    color: 4,
+  },
+  {
+    minBmi: 30,
+    maxBmi: 34.99,
+    state: 'Obesity (Class 1)',
+    healthRisk: 'High',
+    color: 5,
+  },
+  {
+    minBmi: 35,
+    maxBmi: 39.99,
+    state: 'Obesity (Class 2)',
+    healthRisk: 'Very high',
+    color: 6,
+  },
+  {
+    minBmi: 40,
+    maxBmi: null,
+    state: 'Obesity (Class 3)',
+    healthRisk: 'Extreme',
+    color: 7,
+  },
+]

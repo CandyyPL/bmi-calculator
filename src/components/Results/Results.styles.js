@@ -1,12 +1,18 @@
 import styled from 'styled-components'
 
 export const ResultsWrapper = styled.section`
-  width: 30%;
-  height: 60%;
+  width: 60%;
+  height: 80%;
 
-  background-color: #ccc;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  place-self: center;
+
+  background-color: #111a2411;
+  backdrop-filter: blur(10px);
   border: none;
   border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
   display: flex;
   flex-direction: column;
@@ -19,18 +25,7 @@ export const ResultsWrapper = styled.section`
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 2px;
-  }
-
-  .info {
-    width: 100%;
-    height: 90%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    font-family: ${({ theme }) => theme.fonts.nunito};
+    color: white;
   }
 
   .info-card {
@@ -39,7 +34,6 @@ export const ResultsWrapper = styled.section`
     max-height: 140px;
     height: fit-content;
 
-    background-color: #cdeba7;
     border: none;
     border-radius: 10px;
     padding: 10px;
@@ -48,15 +42,52 @@ export const ResultsWrapper = styled.section`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    &.err {
+      justify-content: center;
+      text-align: center;
+    }
+
+    &.illnesses {
+      .card-body {
+        font-size: 26px;
+      }
+    }
   }
 
   .card-title {
     font-size: 18px;
     font-weight: bold;
+
+    text-align: center;
   }
 
   .card-body {
     font-size: 28px;
     font-weight: normal;
+
+    text-align: center;
+  }
+`
+
+export const Info = styled.div`
+  width: 100%;
+  height: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  font-family: ${({ theme }) => theme.fonts.nunito};
+
+  img {
+    height: 200px;
+  }
+
+  .info-card {
+    background-color: ${(props) => props.cardColor};
+
+    color: ${(props) => props.fontColor};
   }
 `
